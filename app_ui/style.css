@@ -3,8 +3,6 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
-
 }
 
 /* Убираем внутренние отступы */
@@ -93,6 +91,7 @@ select {
     align-content: center;
     justify-content: center;
     overflow: auto;
+    font-family: 'Raleway', sans-serif;
 }
 
 
@@ -102,6 +101,7 @@ select {
     background: linear-gradient(220deg, rgba(255,185,96,1) 0%, rgba(134,42,255,1) 58%, rgba(0,35,182,1) 100%);
     width: 400px;
     height: 400px;
+    border-radius: 1%
 }
 
 
@@ -114,29 +114,93 @@ select {
 
 .header_menu {
     width: 100%;
-    position: relative;
-    top: 25%;
+    height: 50px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    align-content: center
 }
 
 .header_menu__item {
-    height: 50px;
+    text-align: center;
+    line-height: 30px;
+    width: 70px;
+    height: 30px;
 }
 
-.header_menu__item > ul {
-    display: relative;
-}
 
-
-/* Tests menu
+/* Tests Popup
 ==============================*/
-.tests_menu {
+.tests_popup {
+    width: 400px;
+    height: 400px;
+    margin-top: -50px;
     display: none;
-    position: absolute;
-    top: 100%;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.tests_popup_window {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255,255,255,.50);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2%;
+}
+
+.tests_popup_window__item {
+    width: 70%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
 }
 
 
-/* Contacts menu
+/* Tests Popup
 ==============================*/
+.contacts_popup {
+    width: 400px;
+    height: 400px;
+    margin-top: -50px;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.contacts_popup_exit_button {
+    position: relative;
+}
+
+.contacts_popup_window {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255,255,255,.50);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2%;
+    padding: 20px 0;
+}
+
+.contacts_popup_window__item {
+    width: 70%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.contacts__link {
+    text-decoration: none;
+    color: #000000;
+    margin-left: 5px;
+}
+
+.contacts_popup_exit {
+    margin-left: 5px;
+}
