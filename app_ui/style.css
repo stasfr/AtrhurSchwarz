@@ -98,17 +98,19 @@ select {
 /* App
 ==============================*/
 .app {
-    background: linear-gradient(220deg, rgba(255,185,96,1) 0%, rgba(134,42,255,1) 58%, rgba(0,35,182,1) 100%);
+    background: linear-gradient(118deg, rgba(219,182,176,1) 0%, rgba(205,133,141,1) 100%);
     width: 400px;
     height: 400px;
-    border-radius: 1%
+    border-radius: 1%;
+    display: flex;
+    flex-direction: column;
 }
 
 
 /* Header
 ==============================*/
 .header {
-    background-color: rgba(255,255,255,.50);
+    background-color: rgba(255,255,255,.20);
     height: 50px;
 }
 
@@ -126,6 +128,17 @@ select {
     line-height: 30px;
     width: 70px;
     height: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.header_menu__item:hover {
+    background-size: 100% 2px;
 }
 
 
@@ -135,16 +148,27 @@ select {
     width: 400px;
     height: 400px;
     margin-top: -50px;
-    display: none;
+    opacity: 0;
+    background-color: rgba(255,255,255,.0);
+    display: flex;
     justify-content: space-around;
     align-items: center;
     align-content: center;
+    transition: all 0.5s ease;
+    transform: translateY(-400px);
+    display: none;
+}
+
+.tests_popup_active {
+    opacity: 1;
+    transform: translateY(0);
+    backdrop-filter: blur(5px);
 }
 
 .tests_popup_window {
     width: 200px;
     height: 200px;
-    background-color: rgba(255,255,255,.50);
+    background-color: rgba(255,255,255,.20);
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -153,10 +177,25 @@ select {
 }
 
 .tests_popup_window__item {
-    width: 70%;
-    height: 50px;
-    line-height: 50px;
+    width: 60%;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.tests_popup_window__item:hover {
+    background-size: 100% 2px;
+}
+
+.coming_soon_button {
+    cursor: wait;
 }
 
 
@@ -165,11 +204,20 @@ select {
 .contacts_popup {
     width: 400px;
     height: 400px;
-    margin-top: -50px;
-    display: none;
+    background-color: rgba(255,255,255,.0);
+    display: flex;
     justify-content: space-around;
     align-items: center;
     align-content: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+    display: none;
+}
+
+.contacts_popup_active {
+    opacity: 1;
+    transform: translateY(-400px);
+    backdrop-filter: blur(5px);
 }
 
 .contacts_popup_exit_button {
@@ -179,7 +227,7 @@ select {
 .contacts_popup_window {
     width: 200px;
     height: 200px;
-    background-color: rgba(255,255,255,.50);
+    background-color: rgba(255,255,255,.20);
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -189,10 +237,24 @@ select {
 }
 
 .contacts_popup_window__item {
-    width: 70%;
+    width: 60%;
     height: 35px;
     line-height: 35px;
     text-align: center;
+    cursor: pointer;
+}
+
+.contacts_popup_window_links {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.contacts_popup_window_links:hover {
+    background-size: 100% 2px;
 }
 
 .contacts__link {
@@ -203,4 +265,58 @@ select {
 
 .contacts_popup_exit {
     margin-left: 5px;
+}
+
+
+/* Content
+==============================*/
+.content {
+    min-height: 330px;
+}
+
+
+/* Footer
+==============================*/
+.footer {
+    background-color: rgba(255,255,255,.20);
+    height: 20px;
+    line-height: 20px;
+}
+
+.footer__item {
+    width: 60px;
+    margin-left: 300px;
+    text-align: center;
+    cursor: default;
+    position: relative;
+    display: inline-block;
+}
+
+.footer__item .footer_toolitip {
+    visibility: hidden;
+    width: 60px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -30px;
+    margin-bottom: 5px;
+    background-color: rgba(255,255,255,.20);
+}
+
+.footer__item .footer_toolitip::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(255,255,255,.20) transparent transparent transparent;
+}
+
+.footer__item:hover .footer_toolitip {
+    visibility: visible;
 }
