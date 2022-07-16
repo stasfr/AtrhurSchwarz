@@ -180,8 +180,6 @@ select {
     width: 60%;
     height: 40px;
     line-height: 40px;
-    background-color: rgba(255,255,255,.60);
-    border-radius: 5%;
     text-align: center;
     cursor: pointer;
     text-decoration: none;
@@ -243,8 +241,6 @@ select {
 .contacts_popup_window__item {
     width: 60%;
     height: 35px;
-    background-color: rgba(255,255,255,.60);
-    border-radius: 5%;
     line-height: 35px;
     text-align: center;
     cursor: pointer;
@@ -284,42 +280,33 @@ select {
     padding: 20px 20px;
 }
 
-.content_file_path {
+.content_path__item {
     min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
 }
 
-.file_path {
-
+.path_label {
+    min-width: 90px;
 }
 
-.file_path_input {
-
+.path_input {
+    width: 270px;
+    background-color: rgba(255,255,255,.30);
+    border-radius: 5px;
+    border: none;
 }
 
-.file_path_button {
-
-}
-
-.content_save_path {
-    min-height: 50px;
-}
-
-.save_path {
-
-}
-
-.save_path_input {
-
-}
-
-.save_path_button {
-
+.path_input:focus {
+    outline: none;
 }
 
 .content_bottom {
     min-height: 210px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: center;
     align-items: center;
 }
@@ -327,28 +314,45 @@ select {
 .file_format {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     width: 40%;
     height: 170px;
     background-color: rgba(255,255,255,.20);
-    border-radius: 5%
+    border-radius: 5%;
+}
+.file_format__header {
+    background-color: rgba(255,255,255,.50);
+    border-radius: 5%;
+    margin: 0px 10px 15px 10px;
+    text-align: center;
 }
 
 .file_format__item {
-
+    margin-left: 40px;
 }
 
-.file_format_checkbox {
-
+.content_bottom__buttons {
+    width: 40%;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255,255,255,.20);
+    border-radius: 5%;
 }
 
-.content_bottom__process_button {
-
+.buttons__item {
+    width: 100px;
+    height: 35px;
+    background-color: rgba(255,255,255,.50);
+    border: none;
+    border-radius: 5%;
+    margin: 10px 0px;
 }
 
-.process_button {
-
+.buttons__item:active {
+    box-shadow: 0.5px 0.5px 1px rgb(174, 96, 105), -0.5px -0.5px 1px rgb(174, 96, 105);
 }
 
 

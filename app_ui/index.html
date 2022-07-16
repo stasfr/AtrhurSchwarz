@@ -26,40 +26,43 @@
 
             <!-- Main functionality -->
             <div class="content">
-                <div class="content_file_path">
-                    <form action="" class="file_path">
-                        <input type="text" class="file_path_input">
-                        <button class="file_path_button">...</button>
-                    </form>
+                <div class="content_path__item">
+                    <div class="path_label">File path:</div>
+                    <input type="text" class="path_input" id="file_path_input">
                 </div>
 
-                <div class="content_save_path">
-                    <form action="" class="save_path">
-                        <input type="text" class="save_path_input">
-                        <button class="save_path_button">...</button>
-                    </form>
+                <div class="content_path__item">
+                    <div class="path_label">Save path:</div>
+                    <input type="text" class="path_input" id="save_path_input">
                 </div>
 
                 <div class="content_bottom">
                     <div class="file_format">
+                        <div class="file_format__header">
+                            <span>Result file</span>
+                            <span>format</span>
+                        </div>
+
                         <div class="file_format__item">
-                            <input type="checkbox" class="file_format_checkbox" id="json_checkbox">
+                            <input type="checkbox" id="json_checkbox">
                             <label for="json_checkbox" class="file_format_label">json</label>
                         </div>
 
                         <div class="file_format__item">
-                            <input type="checkbox" class="file_format_checkbox" id="csv_checkbox">
+                            <input type="checkbox" id="csv_checkbox">
                             <label for="csv_checkbox" class="file_format_label">csv</label>
                         </div>
                         
                         <div class="file_format__item">
-                            <input type="checkbox" class="file_format_checkbox" id="xlmx_checkbox">
+                            <input type="checkbox" id="xlmx_checkbox">
                             <label for="xlmx_checkbox" class="file_format_label">xlmx</label>
                         </div>
                     </div>
 
-                    <div class="content_bottom__process_button">
-                        <button class="process_button"></button>
+                    <div class="content_bottom__buttons">
+                        <button class="buttons__item" id="file_path_button">File path</button>
+                        <button class="buttons__item" id="save_path_button">Save path</button>
+                        <button class="buttons__item" id="process_button">Process</button>
                     </div>
                 </div>
             </div>
