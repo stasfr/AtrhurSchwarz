@@ -21,7 +21,7 @@ def start():
 
 
     app = tkinter.Tk()
-    app.iconphoto(False, tkinter.PhotoImage(file='icon\\icon.png'))
+    app.iconphoto(False, tkinter.PhotoImage(file='app_ui\\icon\\icon.png'))
     app.title('Schwarz test')
     app.geometry("300x100")
     app.resizable(False, False)

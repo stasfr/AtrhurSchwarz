@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon/icon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +26,42 @@
 
             <!-- Main functionality -->
             <div class="content">
+                <div class="content_file_path">
+                    <form action="" class="file_path">
+                        <input type="text" class="file_path_input">
+                        <button class="file_path_button">...</button>
+                    </form>
+                </div>
 
+                <div class="content_save_path">
+                    <form action="" class="save_path">
+                        <input type="text" class="save_path_input">
+                        <button class="save_path_button">...</button>
+                    </form>
+                </div>
+
+                <div class="content_bottom">
+                    <div class="file_format">
+                        <div class="file_format__item">
+                            <input type="checkbox" class="file_format_checkbox" id="json_checkbox">
+                            <label for="json_checkbox" class="file_format_label">json</label>
+                        </div>
+
+                        <div class="file_format__item">
+                            <input type="checkbox" class="file_format_checkbox" id="csv_checkbox">
+                            <label for="csv_checkbox" class="file_format_label">csv</label>
+                        </div>
+                        
+                        <div class="file_format__item">
+                            <input type="checkbox" class="file_format_checkbox" id="xlmx_checkbox">
+                            <label for="xlmx_checkbox" class="file_format_label">xlmx</label>
+                        </div>
+                    </div>
+
+                    <div class="content_bottom__process_button">
+                        <button class="process_button"></button>
+                    </div>
+                </div>
             </div>
 
 
