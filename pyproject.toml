@@ -6,8 +6,7 @@ authors = ["stasfr <stas240600@yandex.ru>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-beautifulsoup4 = "^4.11.1"
-lxml = "^4.9.1"
+Eel = "^0.14.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
