@@ -20,3 +20,11 @@ document.querySelector('#contacts_button').addEventListener('click', () => {
 document.querySelector('#contacts_popup_exit_button').addEventListener('click', () => {
     contactsPopup.classList.toggle('contacts_popup_active')
 })
+
+
+// Error popup 
+const errorPopup = document.querySelector('.error_popup')
+
+document.querySelector('#error_popup_exit_button').addEventListener('click', () => {
+    errorPopup.classList.toggle('error_popup_active')
+})

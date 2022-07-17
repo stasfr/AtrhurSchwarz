@@ -201,7 +201,7 @@ select {
 }
 
 
-/* Tests Popup
+/* Contacts Popup
 ==============================*/
 .contacts_popup {
     width: 400px;
@@ -272,6 +272,54 @@ select {
 }
 
 
+/* Error Popup
+==============================*/
+.error_popup {
+    width: 400px;
+    min-height: 400px;
+    background-color: rgba(255,255,255,.0);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: translateY(-1210px);
+    visibility: hidden;
+}
+
+.error_popup_active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-1200px);
+    backdrop-filter: blur(5px);
+}
+
+.error_popup_window {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255,255,255,.40);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2%;
+    padding: 20px 0;
+}
+
+.error_popup_header {
+
+}
+
+.error_popup_button {
+    cursor: pointer;
+}
+
+.error_popup_exit {
+    margin-left: 5px;
+}
+
+
 /* Content
 ==============================*/
 .content {
@@ -296,6 +344,7 @@ select {
 
 .path_input {
     width: 270px;
+    font-family: sans-serif;
     background-color: rgba(255,255,255,.30);
     border-radius: 5px;
     border: none;
