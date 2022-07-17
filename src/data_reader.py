@@ -3,11 +3,14 @@ import json
 from datetime import datetime
 
 
-def get_result(file_format, is_header, file_path):
+def get_result(settings):
+    #todo: add file format
+    file_path = settings['file_path']
+    save_path = settings['save_path']
     result = {}
     time = datetime.now().strftime('%d_%m_%Y_%H_%M_%S')
     
-    for row in get_data_csv(file_path, is_header):
+    for row in get_data_csv(file_path):
         sum = 0
         result[row[0]] = {}
         test_keys = open_keys_file()
@@ -32,20 +35,18 @@ def get_result(file_format, is_header, file_path):
 
     
 
-    with open(f'results\\result_{time}.json', 'w', encoding='utf-8') as result_file:
+    with open(f'{save_path}\\result_{time}.json', 'w', encoding='utf-8') as result_file:
         json.dump(result, result_file, indent=4, ensure_ascii=False)
 
 
-def get_data_csv(file_path, is_header):
+def get_data_csv(file_path):
     with open(file_path, newline='', encoding='utf-8') as data_file:
         readed_file = list(csv.reader(data_file))
-        if is_header:
-            readed_file.pop(0)
         return readed_file
 
 
 def open_keys_file():
-    with open('data\\keys.json', 'r', encoding='utf-8') as keys_file:
+    with open('keys.json', 'r', encoding='utf-8') as keys_file:
         return json.load(keys_file)
 
 

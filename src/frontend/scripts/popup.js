@@ -20,9 +20,3 @@ document.querySelector('#contacts_button').addEventListener('click', () => {
 document.querySelector('#contacts_popup_exit_button').addEventListener('click', () => {
     contactsPopup.classList.toggle('contacts_popup_active')
 })
-
-
-//Tests
-document.querySelector('.coming_soon_button').addEventListener('click', () => {
-    console.log('done');
-})
