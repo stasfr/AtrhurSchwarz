@@ -307,10 +307,6 @@ select {
     padding: 20px 0;
 }
 
-.error_popup_header {
-
-}
-
 .error_popup_button {
     cursor: pointer;
 }
